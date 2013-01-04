@@ -1,0 +1,60 @@
+Cipher
+------
+hex <=> ascii
+
+base transformations (hex <-> dec <-> oct)
+- http://ingressfieldguide.com/passcodes/5sc3amongusp8y7q (base 5)
+
+Rail Fence 4 cipher
+
+roman numerals -> dec
+- http://ingressfieldguide.com/passcodes/7yc5nagassap2v7s
+
+Caesar cipher / ROT / numerical shifts
+- http://ingressfieldguide.com/passcodes/3yb4nianticx9q8p
+
+reverse order / anagram / scramble / substitutions
+- http://ingressfieldguide.com/passcodes/8xf5exoticw2r7s
+
+    Alt/title text of period link: 7sr2rwetatm5xf8
+    Reversed: 8fx5mtatewr2rs7
+    Rearrange middle word to "matter": 8fx5matterw2rs7
+    Reformat to fit long-passcode format: 8xf5matterw2r7s
+    Replace "matter" with "exotic": 8xf5exoticw2r7s
+
+crazy-ass substitution
+- http://ingressfieldguide.com/passcodes/6zd6alaricw6s6t
+- http://ingressfieldguide.com/passcodes/5uf9wavet3t2t
+    Map characters to binary numbers using O = 0, 8 = 00, Q = 01, I = 1, V = 11, N = 111
+    ...
+    Replace RGX with the word 'blue'
+    Replace 'sine' with 'wave'
+
+morse code
+- http://ingressfieldguide.com/passcodes/5pa6spacetimeq2v6z
+- http://ingressfieldguide.com/passcodes/4qc5niu5y2u
+    punctuation from cell phone description => morse
+
+alternate characters (rail fence link?) to split out two keys:
+- http://ingressfieldguide.com/passcodes/6uc2murderr9z6z
+
+counting lines in characters
+- http://ingressfieldguide.com/passcodes/5sc3amongusp8y7q
+
+Media
+-----
+In the URL
+- https://lh3.googleusercontent.com/-pAU32XLTP8Y/UOY_8n7VMDI/AAAAAAAAnrs/X8nV-L9TwzA/s902/9zd7nianticr4y4t.jpg
+
+In the HTML/CSS/JS markup
+- http://ingressfieldguide.com/passcodes/7yc5nagassap2v7s
+
+Color bars (hex values of colors)
+- http://ingressfieldguide.com/passcodes/3yb4nianticx9q8p
+  - http://ingressfieldguide.com/media/18
+- http://ingressfieldguide.com/passcodes/4re3einsteinq5s2z
+
+Adjust brightness/contrast
+- http://ingressfieldguide.com/passcodes/6zd6alaricw6s6t
+
+Small 1px text
