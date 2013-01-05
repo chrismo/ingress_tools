@@ -13,8 +13,45 @@ class String
     self.to_i(8)
   end
 
+  def from_bin
+    self.to_i(2)
+  end
+
   def chunk(length=1)
     self.scan(/.{#{length}}/)
+  end
+
+  def encode64
+    Base64.encode64(self).chomp.gsub('==', '')
+  end
+
+  def decode64
+    Base64.decode64(self)
+  end
+
+  def to_data
+    [self].pack("H*")
+  end
+
+  def from_data
+    each_byte.to_a
+  end
+
+  def roman_sub
+    [
+        ['ix', '9'],
+        ['iv', '4'],
+        ['viii', '8'],
+        ['vii', '7'],
+        ['vi', '6'],
+        ['v', '5'],
+        ['iii', '3'],
+        ['ii', '2'],
+        ['i', '1']
+    ].each do |rom, dec|
+      self.gsub!(rom, dec)
+    end
+    self
   end
 end
 
@@ -27,27 +64,44 @@ class Fixnum
   def to_letter
     self.chr
   end
-                                    
+
   def to_oct
     self.to_s(8)
+  end
+
+  def to_bin
+    self.to_s(2)
   end
 end
 
 class Array
+  def chunk(length=1)
+    self.join.chunk(length).tap { |_| dump :chunk, _ }
+  end
+
   def to_s
     map(&:to_s).tap { |_| dump :to_s, _ }
   end
 
   def method_missing(meth_id, *args, &block)
-    collect { |x| x.send(meth_id) }.flatten.tap { |_| dump meth_id, _ }
+    collect { |x| x.send(meth_id, *args) }.flatten.tap { |_| dump meth_id, _ }
   end
 
-  def dump(meth_id, ary)
-    puts "#{meth_id.to_s.ljust(10)}: #{ary.inspect}"
+  def dump(meth_id=:self, ary=self)
+    puts "#{meth_id.to_s.ljust(14)}: #{ary.inspect}"
+    self
   end
 
   def xlate(hash_map={})
     collect { |x| hash_map.include?(x) ? hash_map[x] : x }.flatten.tap { |_| dump :xlate, _ }
+  end
+
+  def encode64
+    self.join.encode64.tap { |_| dump 'encode64', _ }
+  end
+
+  def decode64
+    self.join.decode64.tap { |_| dump 'decode64', _ }
   end
 end
 
@@ -80,13 +134,3 @@ def diagnostics
 end
 
 diagnostics
-
-@letters_two = %w(L E N L E T E Z E A A O X)
-# @letters_two.to_ascii.to_s.from_hex.to_letter
-%W(v i x v i \x84 i \x90 i e e y \x88)
-
-# @letters_two.xlate({'L' => 2, 'E' => 4, 'N' => 1, 'T' => 1, 'Z' => 1, 'A' => 2, 'O' => 1, 'X' => 1})
-[2, 4, 1, 2, 4, 1, 4, 1, 4, 2, 2, 1, 1]
-
-@einstein = %w(69 76 72 65 69 69 69 71 76 73 69 69 7A)
-# from_hex.to_letter

@@ -4,8 +4,10 @@ hex <=> ascii
 
 base transformations (hex <-> dec <-> oct)
 - http://ingressfieldguide.com/passcodes/5sc3amongusp8y7q (base 5)
+- binary
 
 Rail Fence 4 cipher
+- tool => http://rumkin.com/tools/cipher/railfence.php
 
 roman numerals -> dec
 - http://ingressfieldguide.com/passcodes/7yc5nagassap2v7s
@@ -58,3 +60,13 @@ Adjust brightness/contrast
 - http://ingressfieldguide.com/passcodes/6zd6alaricw6s6t
 
 Small 1px text
+
+
+Tools
+-----
+http://home.paulschou.net/tools/xlate/
+
+
+JavaScript Console
+------------------
+document.getElementById('passcode').value = 'foo'; redeem();
