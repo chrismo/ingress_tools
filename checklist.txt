@@ -43,6 +43,11 @@ alternate characters (rail fence link?) to split out two keys:
 counting lines in characters
 - http://ingressfieldguide.com/passcodes/5sc3amongusp8y7q
 
+Atbash cipher:
+- http://rumkin.com/tools/cipher/atbash.php
+    "A" becomes a "Z", "B" turns into "Y", etc...
+    - https://plus.google.com/u/0/114702772755508221594/posts/RuaRu7J4xNr
+
 Media
 -----
 In the URL

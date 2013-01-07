@@ -1,5 +1,9 @@
 require File.dirname(__FILE__) + '/lib'
 
+# TODO: morse code
+# TODO: http://rumkin.com/tools/cipher/numbers.php
+
+
 @letters_two = %w(L E N L E T E Z E A A O X)
 @extra_digits = [4, 1, 2]
 @all_as_word = @letters_two.join << '040102'

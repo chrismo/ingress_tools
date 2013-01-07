@@ -103,6 +103,45 @@ class Array
   def decode64
     self.join.decode64.tap { |_| dump 'decode64', _ }
   end
+
+  def bifid
+    Bifid.new.digits_to_letters(self).tap { |_| dump 'bifid', _ }
+  end
+end
+
+class Bifid
+  def digits_to_letters(ary)
+    map = {
+        [1, 1] => 'A',
+        [1, 2] => 'B',
+        [1, 3] => 'C',
+        [1, 4] => 'D',
+        [1, 5] => 'E',
+        [2, 1] => 'F',
+        [2, 2] => 'G',
+        [2, 3] => 'H',
+        [2, 4] => 'I',
+        [2, 5] => 'K',
+        [3, 1] => 'L',
+        [3, 2] => 'M',
+        [3, 3] => 'N',
+        [3, 4] => 'O',
+        [3, 5] => 'P',
+        [4, 1] => 'Q',
+        [4, 2] => 'R',
+        [4, 3] => 'S',
+        [4, 4] => 'T',
+        [4, 5] => 'U',
+        [5, 1] => 'V',
+        [5, 2] => 'W',
+        [5, 3] => 'X',
+        [5, 4] => 'Y',
+        [5, 5] => 'Z'
+    }
+    ary.each_slice(2).to_a.collect { |sub_ary|
+      map[sub_ary]
+    }
+  end
 end
 
 def regex
